@@ -3,22 +3,21 @@
 
 ### How to run 
 
-1. You need Install amplify CLI for this  package 
-
+You need Install amplify CLI for this  package 
 
 ```
 npm install -g @aws-amplify/cli
 
 ```
 
-2 inside the app directory, install Amplify API and etc 
+Inside the app directory, install Amplify API and etc 
 
 ```
 npm install
 ```
 
 
-### Local developing 
+### local development
 
  ```
 npm start
