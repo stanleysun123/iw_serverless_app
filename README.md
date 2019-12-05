@@ -27,7 +27,7 @@ npm start
 
 Enable static web hosting for the app on Amazon S3. In a terminal window, change to the root directory of your app and run the following command:
 ```
-$ amplify add hosting
+amplify add hosting
 ```
 
 Run the following command to publish the app to AWS:
