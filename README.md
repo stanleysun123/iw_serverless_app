@@ -47,10 +47,10 @@ amplify publish
 | Hosting  | S3AndCloudFront | No Change | awscloudformation |
 
 Hosting endpoint: http://myapp-20191204174828-hostingbucket-test.s3-website-ap-southeast-2.amazonaws.com
+
 API endpoint: https://kih5kcs1t2.execute-api.ap-southeast-2.amazonaws.com/test/items
 
 
 ###  Reference:
 
-Aws-amplify :
-https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&platform=purejs
+**AWS-amplify**: https://aws-amplify.github.io/docs/js/start?ref=amplify-js-btn&platform=purejs
