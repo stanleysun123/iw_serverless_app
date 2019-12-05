@@ -1,0 +1,81 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-myapp-test-172744-authRole",
+            "UnauthRoleArn": "arn:aws:iam::042333910941:role/amplify-myapp-test-172744-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::042333910941:role/amplify-myapp-test-172744-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-myapp-test-172744-deployment",
+            "UnauthRoleName": "amplify-myapp-test-172744-unauthRole",
+            "StackName": "amplify-myapp-test-172744",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:042333910941:stack/amplify-myapp-test-172744/2f4d9820-165f-11ea-bd29-0ad2fa41fde2",
+            "AmplifyAppId": "d2becwsadbl2yp"
+        }
+    },
+    "function": {
+        "myapplabel1": {
+            "service": "Lambda",
+            "providerPlugin": "awscloudformation",
+            "build": true,
+            "lastBuildTimeStamp": "2019-12-04T06:40:16.489Z",
+            "lastPackageTimeStamp": "2019-12-04T06:40:24.286Z",
+            "distZipFilename": "myapplabel1-39557769736843517042-build.zip",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myapp-test-172744-deployment/amplify-cfn-templates/function/myapplabel1-cloudformation-template.json",
+                "logicalId": "functionmyapplabel1"
+            },
+            "lastPushTimeStamp": "2019-12-04T12:15:12.144Z",
+            "output": {
+                "Region": "ap-southeast-2",
+                "Arn": "arn:aws:lambda:ap-southeast-2:042333910941:function:myapplabel1-test",
+                "Name": "myapplabel1-test",
+                "LambdaExecutionRole": "myappLambdaRole87965e90-test"
+            },
+            "lastPushDirHash": "lXnqpbh26WZQD9jFVG+Z2mHGYX0="
+        }
+    },
+    "api": {
+        "amplifyapi": {
+            "service": "API Gateway",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "myapplabel1",
+                    "attributes": [
+                        "Name",
+                        "Arn"
+                    ]
+                }
+            ],
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myapp-test-172744-deployment/amplify-cfn-templates/api/amplifyapi-cloudformation-template.json",
+                "logicalId": "apiamplifyapi"
+            },
+            "lastPushTimeStamp": "2019-12-04T12:15:12.159Z",
+            "output": {
+                "ApiName": "amplifyapi",
+                "RootUrl": "https://kih5kcs1t2.execute-api.ap-southeast-2.amazonaws.com/test"
+            },
+            "lastPushDirHash": "wQ0jxkcvQrIIKzd48Qe/QOf7r5w="
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-myapp-test-172744-deployment/amplify-cfn-templates/hosting/template.json",
+                "logicalId": "hostingS3AndCloudFront"
+            },
+            "lastPushTimeStamp": "2019-12-04T12:15:12.162Z",
+            "output": {
+                "S3BucketSecureURL": "https://myapp-20191204174828-hostingbucket-test.s3.amazonaws.com",
+                "WebsiteURL": "http://myapp-20191204174828-hostingbucket-test.s3-website-ap-southeast-2.amazonaws.com",
+                "Region": "ap-southeast-2",
+                "HostingBucketName": "myapp-20191204174828-hostingbucket-test"
+            },
+            "lastPushDirHash": "NHs841RkLjzeaijW6/1emv6bt/Q="
+        }
+    }
+}
