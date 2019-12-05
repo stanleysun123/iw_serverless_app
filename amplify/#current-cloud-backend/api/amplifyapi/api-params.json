@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "myapplabel1",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "amplifyapi",
+    "apiName": "amplifyapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "myapplabel1"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-myapp-test-172744-authRole",
+        "unAuthRoleName": "amplify-myapp-test-172744-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "myapplabel1",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
