@@ -17,7 +17,7 @@ npm install
 ```
 
 
-### local development
+### Local development
 
  ```
 npm start
@@ -42,7 +42,7 @@ amplify publish
 
 | Category | Resource name   | Operation | Provider plugin   |
 | -------- | --------------- | --------- | ----------------- |
-| Function | myapplabel1     | Update    | awscloudformation |
+| Function | myapplabel1     | No Change | awscloudformation |
 | Api      | amplifyapi      | No Change | awscloudformation |
 | Hosting  | S3AndCloudFront | No Change | awscloudformation |
 
